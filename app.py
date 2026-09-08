@@ -294,7 +294,7 @@ def main():
             if uploaded_file is not None:
                 image_bytes = uploaded_file.read()
                 img_array, img_pil = preprocess_image(image_bytes)
-                st.image(img_pil,caption=f"Uploaded: {uploaded_file.name}",use_column_width=True)
+                st.image(img_pil,caption=f"Uploaded: {uploaded_file.name}",use_container_width=True)
 
 
         with col_output:
@@ -391,7 +391,7 @@ def main():
             with target_col:
                 st.markdown(f"#### {sample_title}")
                 if os.path.exists(sample_path):
-                    st.image(sample_path, use_column_width=True)
+                    st.image(sample_path, use_container_width=True)
                     if st.button(f"Analyze {sample_title}", key=f"btn_sample_{idx}"):
                         img_pil = Image.open(sample_path)
                         img_array, _ = preprocess_image(img_pil)
