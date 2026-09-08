@@ -1,0 +1,43 @@
+﻿# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*.ipynb
+
+# Models - keep only the ones the app actually uses
+# App tries fruit_ripe_improved.keras first, then fruit_ripe_fixed.keras
+models/fruit_ripe.h5
+models/fruit_ripe.keras
+models/fruit_ripe.pkl
+models/fruit_ripe.weights.h5
+models/fruit_ripeness.onnx
+models/saved_model.pb
+
+# Sample images (large assets, not needed for code)
+sample_images/
+
+# Training / evaluation scripts (not needed for deployment)
+eval_on_test_set.py
+generate_samples.py
+inspect_dataset_files.py
+inspect_misclassified.py
+train_improved_model.py
+train_mobilenet_cpu.py
+verify_pipeline.py
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/secrets.toml
